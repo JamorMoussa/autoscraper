@@ -1,1 +1,1 @@
-import bs4scraper
+import bs4scraper_
