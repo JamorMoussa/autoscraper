@@ -2,7 +2,6 @@
 name = "bs4scraper"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
 authors = [
     { name = "JamorMoussa", email = "moussajamorsup@gmail.com" }
 ]
