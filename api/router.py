@@ -1,13 +1,13 @@
-from fastapi import APIRouter, Request
+from fastapi import APIRouter
 
-from .core.simple_scraper import simple_scraper_endpoint
-from .models import SimpleScraperModel
-
-router = APIRouter(
-    prefix= "/api/v1/scrape",
-    tags= ["api_v1", ]
+from .routes import (
+    basic
 )
 
-@router.post("/")
-def scrape(request: SimpleScraperModel):
-    return simple_scraper_endpoint(request=request)
+router = APIRouter(
+    prefix= "/api/v1",
+    tags= ["api_v1"]
+)
+
+router.include_router(router=basic.router)
+

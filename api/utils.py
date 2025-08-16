@@ -11,9 +11,9 @@ def convert_selector_field(
     for field_name in fields:
         out_fields[field_name] = (
             SelectorField, SelectorField(
-                css_class= fields[field_name].css_class,
-                parse_type= ParseType.CONTENT if fields[field_name].parse_type == "content" else ParseType.ATTRIBUTE,
-                attr_name= fields[field_name].attr_name,
+                selector= fields[field_name].selector,
+                data_from= ParseType.CONTENT if fields[field_name].data_from == "content" else ParseType.ATTRIBUTE,
+                attribute= fields[field_name].attribute,
                 processor= eval(fields[field_name].processor)
             )
         )

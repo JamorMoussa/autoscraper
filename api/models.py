@@ -4,15 +4,15 @@ from typing import Literal, Optional, List, Dict
 
 
 class FieldConfig(BaseModel):
-    css_class: str
-    parse_type: Literal["content", "attribute"] = "content"
-    attr_name: Optional[str] = ""
+    selector: str
+    data_from: Literal["content", "attribute"] = "content"
+    attribute: Optional[str] = ""
     processor: Optional[str] = "lambda x:x"
 
 
 class CSSSelectors(BaseModel):
     fields: Dict[str, FieldConfig]
-    card: str
+    card_selector: str
 
 
 class WebsiteInfo(BaseModel):
@@ -20,6 +20,6 @@ class WebsiteInfo(BaseModel):
     url: str
 
 
-class SimpleScraperModel(BaseModel):
+class BasicScraperModel(BaseModel):
     website: WebsiteInfo
     css_selectors: CSSSelectors
