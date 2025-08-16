@@ -1,4 +1,4 @@
-from bs4scraper._base import (
+from bs4scraper.base import (
     BaseScraper, SelectorField, BaseSelector, ParseType
 )
 

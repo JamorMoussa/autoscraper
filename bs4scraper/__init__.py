@@ -1,1 +1,1 @@
-from ._bs4 import * 
+from .scraper import * 
