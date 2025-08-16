@@ -1,40 +1,22 @@
 {
     "website": {
-        "name": "linkedin",
-        "url": "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?keywords=data+science&location=casablanca"
+        "name": "amazon",
+        "url": "https://www.amazon.com/s?k=iphone"
     },
     "css_selectors": {
         "fields": {
-                "job_title": {
-                    "css_class": "base-search-card__title",
-                    "processor": "lambda title: title.replace('\\n', '').strip()"
-                },
-                "company": {
-                    "css_class": "hidden-nested-link",
-                    "processor": "lambda input: input.replace('\\n', '').strip()"
-                }
-                ,
-                "location": {
-                    "css_class": "job-search-card__location",
-                    "processor": "lambda title: title.replace('\\n', '').strip()"
-                },
-                "job_link": {
-                    "css_class": "base-card__full-link absolute top-0 right-0 bottom-0 left-0 p-0 z-[2] outline-offset-[4px]",
-                    "parse_type": "attribute",
-                    "attr_name": "href"
-                },
-                "date": {
-                    "css_class": "job-search-card__listdate--new",
-                    "parse_type": "attribute",
-                    "attr_name": "datetime"
-                },
-                "job_id": {
-                    "css_class": "base-card relative w-full hover:no-underline focus:no-underline base-card--link base-search-card base-search-card--link job-search-card",
-                    "parse_type": "attribute",
-                    "attr_name": "data-entity-urn",
-                    "processor": "lambda id: id.split(':')[-1]"
-                }
+            "title": {
+                "selector": ".s-title-instructions-style"
             },
-        "card": "base-card relative w-full hover:no-underline focus:no-underline base-card--link base-search-card base-search-card--link job-search-card"
+            "img": {
+                "selector": ".s-image",
+                "data_from": "attribute",
+                "attribute": "src"
+            },
+            "price": {
+                "selector": ".a-offscreen"
+            }
+        },
+        "card_selector": ".puis-card-border"
     }
 }
