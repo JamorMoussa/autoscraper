@@ -1,4 +1,4 @@
-from bs4scraper import (
+from autoscraper import (
     SelectorField, ParseType
 )
 

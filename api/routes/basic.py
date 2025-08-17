@@ -1,4 +1,4 @@
-from bs4scraper import (
+from autoscraper import (
     Scraper, Selector
 )
 from pydantic import create_model

@@ -1,5 +1,5 @@
-from bs4scraper import ParseType, SelectorField, Scraper, Selector
-from bs4scraper.net import HtmlRequester
+from autoscraper import ParseType, SelectorField, Scraper, Selector
+from autoscraper.net import HtmlRequester
 
 from pprint import pprint
 from pydantic import BaseModel

@@ -1,4 +1,4 @@
-from bs4scraper.base import (
+from autoscraper.base import (
     BaseSelector, SelectorField
 )
 
