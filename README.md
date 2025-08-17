@@ -1,1 +1,1 @@
-# bs4-scraper
+# AutoScraper
