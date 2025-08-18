@@ -1,6 +1,6 @@
 # AutoScraper
 
-**AutoScraper** is a JSON-based scraping library that allows you to extract content from websites using the power of CSS selectors. It supports **classes**, **IDs**, and even **attributes**. You can use it in two ways: directly in code or via an HTTP API.
+**AutoScraper** is a JSON-based scraping library that allows you to extract content from websites using the power of CSS selectors defined in json format. It supports **classes**, **IDs**, and even **attributes**. You can use it in two ways: directly in code or via an HTTP API.
 
 ## 🚀 Project Setup
 
